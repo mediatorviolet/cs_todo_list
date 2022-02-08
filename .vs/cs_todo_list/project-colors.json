@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "1b3131a6-bdc6-4715-9aa5-23d9a119777f": {
+      "ProjectGuid": "1b3131a6-bdc6-4715-9aa5-23d9a119777f",
+      "DisplayName": "cs_todo_list",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
