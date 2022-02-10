@@ -5,8 +5,62 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:cs_todo_list"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
-    </Grid>
+        WindowStartupLocation="CenterScreen"
+        Title="ToddoList" Height="400" Width="800">
+    <StackPanel Margin="2,2,2,2" Background="AliceBlue">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0">
+                <Label Margin="20,4,4,4" FontWeight="Bold" FontSize="20">To Do List</Label>
+                <ListBox x:Name="listToDoListBox" Width="300" Height="160" SelectionChanged="ListToDoListBox_SelectionChanged">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate DataType="{x:Type local:Todo}">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="> "/>
+                                <TextBlock Text="{Binding Path=Id}"/>
+                                <TextBlock Text="  > "/>
+                                <TextBlock Text="{Binding Path=Name}"/>
+                                <TextBlock Text="  >  "/>
+                                <TextBlock Text="{Binding Path=Status}"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+                <Button Margin="6,6,6,6" Name="BtnRefreshList" Width="100" Height="26" Click="BtnRefreshList_Click">Refresh List</Button>
+            </StackPanel>
+            <StackPanel Grid.Column="1">
+                <Label Margin="20,4,4,4" FontWeight="Bold" FontSize="20">Add To Do</Label>
+                <StackPanel Orientation="Horizontal">
+                    <Label Margin="20,4,4,4">Name</Label>
+                    <TextBox Name="txtboxName" Width="120" Height="22"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Margin="20,4,4,4">Status</Label>
+                    <TextBox Name="txtboxStatus" Width="120" Height="22"></TextBox>
+                </StackPanel>
+                <Button Margin="6,16,6,6" Name="BtnAddToDo" Width="100" Height="26" Click="BtnAddToDo_Click">Add ToDo</Button>
+            </StackPanel>
+            <StackPanel Grid.Column="2">
+                <Label Margin="10,4,4,4" FontWeight="Bold" FontSize="20">Edit To Do</Label>
+                <StackPanel Orientation="Horizontal">
+                    <Label Margin="10,4,4,4">Id</Label>
+                    <TextBox Name="txtboxEditId" Width="120" Height="22" IsReadOnly="True" Foreground="DarkGray" Margin="23,0,0,0"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Margin="10,4,4,4">Name</Label>
+                    <TextBox Name="txtboxEditName" Width="120" Height="22"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Margin="10,4,4,4">Status</Label>
+                    <TextBox Name="txtboxEditStatus" Width="120" Height="22"></TextBox>
+                </StackPanel>
+                <Button  Margin="6,16,6,6" Name="BtnSaveToDo" Width="100" Height="26" Click="BtnSaveToDo_Click">Save</Button>
+                <Button Margin="6,16,6,6" Name="BtnDeleteToDo" Width="100" Height="26" Click="BtnDeleteToDo_Click">Delete</Button>
+            </StackPanel>
+        </Grid>
+    </StackPanel>
 </Window>

@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "7U8luGVwDEy0M1QuDCrXfPgTBumsaDlnxDbDub+zelXWKOaLnylxpuC0kGq6eOvE8wI7aNCFKEHQzeX81uPTbA==",
+  "dgSpecHash": "0x2EnzbcEwJ7bWidVsJhDuWzzMSsteIH4jHhN7VenB2hfLdmGh7TXDPfo7ZwUyCYcgyPcofYfSBx4n4fPJt/MA==",
   "success": true,
   "projectFilePath": "C:\\Users\\antoine\\dev\\cs_todo_list\\cs_todo_list.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\antoine\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
     "C:\\Users\\antoine\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\antoine\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\antoine\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
